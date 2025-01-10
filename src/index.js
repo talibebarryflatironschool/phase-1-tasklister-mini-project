@@ -3,16 +3,23 @@ const createTaskFormElement = document.getElementById('create-task-form');
 createTaskFormElement.addEventListener('submit',  (event) => {
 event.preventDefault()
 
- const newTaskDescriptionInputElement= document.getElementById('new-task-description')
+  const newTaskDescriptionInputElement= document.getElementById('new-task-description')
+  console.log (newTaskDescriptionInputElement)
 
- const liElement = document.createElement('li')
- liElement.textcontent = newTaskDesccriptionInput.value
+  const liElement = document.createElement('li')
+ liElement.textContent = newTaskDescriptionInputElement.value
+ const ulElement = document.getElementById('tasks')
+ ulElement.appendChild(liElement)
 
   
-  const delBtn = document.createElement('button');
-  deleteButton.textcontent = "X"
-  deletebutton.setAttribute('data-description' , newTaskDescriptionInputElement.value)
-  deletteButton.addEventListener('click', (event) => {
-    lieElement.remove()
-    event.target.parentNode.remove()
-    })
+   const deleteButton = document.createElement('button');
+   deleteButton.textContent = "X"
+   deleteButton.setAttribute('data-description' , newTaskDescriptionInputElement.value)
+  
+   deleteButton.addEventListener('click', (event) => {
+   liElement.remove()
+//   event.target.parentNode.remove()
+})
+})
+})
+  
